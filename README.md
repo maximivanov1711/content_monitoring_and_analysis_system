@@ -1,3 +1,5 @@
+<img width="946" height="600" alt="image" src="https://github.com/user-attachments/assets/a2e3f6cf-c993-41ad-bac4-441cd38e54b7" />
+
 # Automatic content monitoring and analysis system
 
 ## AI Saves $2,000+ Per Month for an Info Business on Content Search and Analysis
