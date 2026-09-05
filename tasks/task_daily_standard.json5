@@ -1,0 +1,568 @@
+{
+    "start_immediately": true,
+    // "cron_expression": "0 9 * * *",
+    "test_parameters": {
+        "enabled": false
+    },
+    "enabled_post_types": [
+      "youtube_video",
+      "youtube_shorts", 
+      "youtube_post",
+    //    "vk_long_video",
+    //    "vk_short_video",
+    //    "vk_post",
+    //    "telegram_post",
+       "instagram_reels",
+       "instagram_post",
+       "tiktok_video",
+       "tiktok_photo",
+    //    "dzen_article",
+    //    "dzen_news",
+    //    "dzen_long_video",
+    //    "dzen_short_video",
+    //    "dzen_post",
+       // "twitch_video",
+       // "twitch_stream"
+    ],
+    "search_parameters": {
+    //   "search_in_cache_sql": "SELECT * FROM post_cache WHERE url = 'https://www.tiktok.com/@arsenmbaza09/video/7561401841737600278'",
+    //   "max_results_per_post_type": 10,
+      "filter_cached": true,
+      // "find_post_with_errors": true,
+       // "use_mock_results": true,
+       // "mock_results_path": "data/search_results/previous/search_results_LAST_DAY_13-48-19.json",
+      // "score_filter": [0, 1]
+    },
+    "search_google_parameters": {
+        "enabled": true
+    },
+    "search_vk_parameters": {
+        "enabled": false,
+        "query": ["маркарян", "макарян", "маркарьян", "макарьян", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+        "start_date": "2026-04-13",
+        "date_filter": "day",
+        // "use_mock_results": false,
+        // "mock_results_path": ""
+    },
+    "search_telegram_parameters": {
+        "enabled": false,
+        "query": ["маркарян", "макарян", "маркарьян", "макарьян", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+        "start_date": "2026-04-13",
+        // "use_mock_results": false,
+        // "mock_results_path": ""
+    },
+    "search_youtube_parameters": {
+        "enabled": true,
+        "query": ["маркарян", "макарян", "маркарьян", "макарьян", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+        "start_date": "2026-04-13",
+        // "use_mock_results": false,
+        // "mock_results_path": "",
+        // "max_pages": 1,
+    },
+    "add_info_parameters": {
+      "enabled": true,
+      "refresh_profile_data": true,
+      "force_skip_processing": false,
+      "skip_with_post_info": false,
+      "use_profile_cache": true,
+      "update_profile_cache": true,
+      "use_post_cache": true,
+      "update_post_cache": true,
+      "force_update_post_cache": false,
+      "force_update_profile_cache": false,
+      "refetch_post_with_errors": true,
+      "refetch_profile_with_errors": true,
+      "start_date": "2026-04-13",
+    //   "fields_to_update": ["score"],
+      "batch_settings": {
+            "telegram": {
+                "batch_size": 1,
+                "delay_between_calls": 2,
+                "delay_between_batches": 2
+            },
+            "dzen": {
+                "batch_size": 20,
+                "delay_between_calls": 0.1,
+                "delay_between_batches": 0.1
+            },
+            "instagram": {
+                "batch_size": 5,
+                "delay_between_calls": 0.5,
+                "delay_between_batches": 0.5
+            },
+            "youtube": {
+                "batch_size": 50,
+                "delay_between_calls": 0.1,
+                "delay_between_batches": 0.1
+            },
+            "tiktok": {
+                "batch_size": 600,
+                "delay_between_calls": 0.5,
+                "delay_between_batches": 0.5
+            },
+            "vk": {
+                "batch_size": 20,
+                "delay_between_calls": 0.2,
+                "delay_between_batches": 0.2
+            },
+            "twitch": {
+                "batch_size": 1,
+                "delay_between_calls": 1,
+                "delay_between_batches": 1
+            }
+        },
+        // "batch_settings": {
+        //     "telegram": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "dzen": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "instagram": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "youtube": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "tiktok": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "vk": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     },
+        //     "twitch": {
+        //         "batch_size": 1,
+        //         "delay_between_calls": 0,
+        //         "delay_between_batches": 0
+        //     }
+        // }
+    },
+    "add_subtitles_parameters": {
+      "enabled": true,                    
+      "use_post_cache": true,              
+      "update_post_cache": true,
+      "upload_media": true,            
+      "transcribe": true,               
+      "force_download_media": true,
+      "score_filter": [0],
+      "fields_to_update": ["subtitles_info"],
+      "max_duration": 1800
+    },
+    "analyze_parameters": {
+      "enabled": true,
+      "text_system_prompt_path": "prompts/analysis_prompt_system_short_text.md",
+      "text_user_prompt_path": "prompts/analysis_prompt_user.md",
+      "subtitles_system_prompt_path": "prompts/analysis_prompt_system_short_subtitles.md",
+      "subtitles_user_prompt_path": "prompts/analysis_prompt_user.md",
+      "score_filter": [0],
+      "post_types": [
+        "youtube_video",
+        "youtube_shorts", 
+        "youtube_post",
+        "vk_long_video",
+        "vk_short_video",
+        "vk_post",
+        "telegram_post",
+        "instagram_reels",
+        "instagram_post",
+        "tiktok_video",
+        "tiktok_photo",
+        "dzen_article",
+        "dzen_news",
+        "dzen_long_video",
+        "dzen_short_video",
+        "dzen_post",
+        "twitch_video",
+        // "twitch_stream"
+      ],
+      "use_cache": true,
+      "update_cache": true,
+      "fields_to_update": ["analysis_info"]
+    },
+    "export_parameters": {
+        "enabled": true,
+        "format_results": true,
+        "score_filter": [0],
+        // TEST TABLE:
+        // "table_id": "1mGze40WNkZ6jh1TlHANJCZpb4qR_KQLDgsZAQc-G_QI",
+        // "unofficial_content_sheet_id": "1614089479",
+        // "editors_content_sheet_id": "355650644",
+        // "youtube_content_sheet_id": "1200753368",
+        // PRODUCTION TABLE:
+        "table_id": "15zehNcNtz576PJ22JuyXMvoDDxBYnz1p_lUwyqUBdTY",
+        "unofficial_content_sheet_id": "1043963986",
+        "editors_content_sheet_id": "340483077",
+        "youtube_content_sheet_id": "2086472939",
+    },
+    "notify_parameters": {
+        "enabled": true
+    },
+    "search_google_queries": {
+    //   "dzen_with_date": [
+    //       { // Dzen articles WITH DATE
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/a/"], 
+    //           "sites": ["dzen.ru"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Dzen posts WITH DATE
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/b/"], 
+    //           "sites": ["dzen.ru"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Dzen news WITH DATE
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/news/story/"], 
+    //           "sites": ["dzen.ru"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Dzen long videos WITH DATE
+    //           "enabled": true,
+    //           "udm": 7,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/video/watch/"], 
+    //           "sites": ["dzen.ru"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Dzen short videos WITH DATE
+    //           "enabled": true,
+    //           "udm": 7,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/shorts/"], 
+    //           "sites": ["dzen.ru"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       }
+    //   ],
+    //   "dzen_no_date": [
+    //       { // Dzen articles NO DATE
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/a/"], 
+    //           "sites": ["dzen.ru"]
+    //       },
+    //       { // Dzen posts NO DATE
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/b/"], 
+    //           "sites": ["dzen.ru"]
+    //       },
+    //       { // Dzen news NO DATE
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/news/story/"], 
+    //           "sites": ["dzen.ru"]
+    //       },
+    //       { // Dzen long videos NO DATE
+    //           "enabled": true,
+    //           "udm": 7,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/video/watch/"], 
+    //           "sites": ["dzen.ru"]
+    //       },
+    //       { // Dzen short videos NO DATE
+    //           "enabled": true,
+    //           "udm": 7,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["dzen.ru/shorts/"], 
+    //           "sites": ["dzen.ru"]
+    //       }
+    //   ],
+
+
+
+      "instagram_with_date": [
+          { // Instagram post with title filter
+              "enabled": true,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/p/"],
+              "sites": ["instagram.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+          { // Instagram post without title filter
+              "enabled": true,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/p/"],
+              "sites": ["instagram.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+          { // Instagram reel with title filter
+              "enabled": true,
+              "udm": 7,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/reel/"],
+              "sites": ["instagram.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              // "date_step": 3
+              "date_step": 1
+          },
+          { // Instagram reel without title filter
+              "enabled": true,
+              "udm": 7,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/reel/"],
+              "sites": ["instagram.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+      ],
+      "instagram_no_date": [
+          { // Instagram post with title filter
+              "enabled": true,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/p/"],
+              "sites": ["instagram.com"]
+          },
+          { // Instagram post without title filter
+              "enabled": true,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/p/"],
+              "sites": ["instagram.com"]
+          },
+          { // Instagram reel with title filter
+              "enabled": true,
+              "udm": 7,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/reel/"],
+              "sites": ["instagram.com"]
+          },
+          { // Instagram reel without title filter
+              "enabled": true,
+              "udm": 7,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/reel/"],
+              "sites": ["instagram.com"]
+          },
+      ],
+
+
+
+      "tiktok_with_date": [
+          { // Tiktok photo with title filter
+              "enabled": true,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/photo/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+          { // Tiktok photo without title filter
+              "enabled": true,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/photo/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+          { // Tiktok video with title filter
+              "enabled": true,
+              "udm": 7,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/video/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              // "date_step": 3
+              "date_step": 1
+          },
+          { // Tiktok video without title filter
+              "enabled": true,
+              "udm": 7,
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/video/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"],
+              "start_date": "2026-04-13",
+              "end_date": "2026-04-15",
+              "date_step": 1
+          },
+      ],
+      "tiktok_no_date": [
+          { // Tiktok photo with title filter
+              "enabled": true,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/photo/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"]
+          },
+          { // Tiktok photo without title filter
+              "enabled": true,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/photo/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"]
+          },
+          { // Tiktok video with title filter
+              "enabled": true,
+              "udm": 7,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "title_filter": ["арсен", "маркарян", "арсенмаркарян", "arsen", "markaryan", "arsenmarkaryan", "макарян", "маркарьян", "макарьян", "база", "джагаспанян", "джага", "djaga"],
+              "url_filter": ["/video/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"]
+          },
+          { // Tiktok video without title filter
+              "enabled": true,
+              "udm": 7,
+              // "query": ["маркарян"],
+              "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+              "url_filter": ["/video/"],
+              "negative_url_filter": ["tiktok.com/discover/"],
+              "sites": ["tiktok.com"]
+          }
+      ],
+
+
+
+    //   "twitch_with_date": [
+    //       { // Twitch clips clips.twitch.tv
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["clips.twitch.tv/"],
+    //           "sites": ["twitch.tv"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Twitch clips /clip/
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["/clip/"],
+    //           "negative_url_filter": ["clips.twitch.tv/"],
+    //           "sites": ["twitch.tv"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Twitch videos /videos/
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["twitch.tv/videos/"],
+    //           "sites": ["twitch.tv"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       },
+    //       { // Twitch videos /video
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["/video"],
+    //           "negative_url_filter": ["twitch.tv/videos/"],
+    //           "sites": ["twitch.tv"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       }
+    //   ],
+    //   "twitch_no_date": [
+    //       { // Twitch clips clips.twitch.tv
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["clips.twitch.tv/"],
+    //           "sites": ["twitch.tv"]
+    //       },
+    //       { // Twitch clips /clip/
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["/clip/"],
+    //           "negative_url_filter": ["clips.twitch.tv/"],
+    //           "sites": ["twitch.tv"]
+    //       },
+    //       { // Twitch videos /videos/
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["twitch.tv/videos/"],
+    //           "sites": ["twitch.tv"]
+    //       },
+    //       { // Twitch videos /video
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["/video"],
+    //           "negative_url_filter": ["twitch.tv/videos/"],
+    //           "sites": ["twitch.tv"]
+    //       }
+    //   ],
+
+
+
+    //   "vk_with_date": [
+    //       { // VK
+    //           "enabled": true,
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["vk.com/wall"], 
+    //           "sites": ["vk.com"],
+    //           "start_date": "2026-04-13",
+    //           "end_date": "2026-04-15",
+    //           "date_step": 1
+    //       }
+    //   ],
+    //   "vk_no_date": [
+    //       { // VK
+    //           "enabled": true,
+    //           // "query": ["маркарян"],
+    //           "query": ["\"маркарян\"", "\"макарян\"", "\"маркарьян\"", "\"макарьян\"", "арсен маркарян", "arsen markaryan", "база арсена маркаряна", "база маркаряна", "мистер джага", "арсен джагаспанян", "mr. djaga", "объединение арсена маркаряна"],
+    //           "url_filter": ["vk.com/wall"], 
+    //           "sites": ["vk.com"]
+    //       }
+    //   ]
+    }
+}
